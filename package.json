@@ -6,7 +6,7 @@
   "main": ".webpack/main",
   "scripts": {
     "start": "npx ts-node ./bot.ts",
-    "deploy": "nx ts-node ./deploy-commands.ts",
+    "deploy": "npx ts-node ./deploy-commands.ts",
     "lint": "eslint ."
   },
   "keywords": [],
