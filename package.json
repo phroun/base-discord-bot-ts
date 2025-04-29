@@ -1,0 +1,35 @@
+{
+  "name": "base-discord-bot-ts",
+  "productName": "base-discord-bot-ts",
+  "version": "1.0.0",
+  "description": "My Discord Bot with TypeScript",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "npx ts-node ./bot.ts",
+    "deploy": "nx ts-node ./deploy-commands.ts",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jeff R. Day",
+    "email": "phroun@gmail.com"
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.31.0",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.1"
+  }
+}

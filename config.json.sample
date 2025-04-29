@@ -1,0 +1,5 @@
+{
+	"token": "TOKEN_GOES_HERE",
+        "clientId": "CLIENT_ID_GOES_HERE",
+        "guildId": "GUILD_ID_GOES_HERE"
+}

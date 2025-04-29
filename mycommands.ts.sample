@@ -1,0 +1,43 @@
+import fs = require('node:fs');
+const dynamicRequire = (filePath: string) => require(filePath);
+
+function fileGetContents(name: string) {
+  try {
+    return fs.readFileSync(name, { encoding: 'utf8' });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const commandSet = {
+  sample: function(slash: boolean, s: string) {
+    return (slash ? ('Command: ' + s) : "")
+    + 'Sample command.';
+  }
+}
+
+// ===== Uncomment the magic below and fill in the refreshModules function in case you want live updating =====
+
+/*
+
+function rerequire(module: string) {
+  const modulePath = require.resolve(module);
+  const mod = require.cache[modulePath];
+  delete require.cache[modulePath]; // Clear the cache
+  for (let i = 0; i < mod.parent.children.length; i++) {
+    if (mod.parent.children[i] === mod) {
+      mod.parent.children.splice(i, 1);
+      break;
+    }
+  }
+  return require(module); // Re-import
+}
+
+function refreshModules() {
+  // moduleVar = undefined;
+  // moduleVar = rerequire('./path.ts');
+}
+
+setInterval(refreshModules, 2000);
+
+*/
